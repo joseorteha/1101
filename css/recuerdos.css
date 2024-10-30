@@ -1,0 +1,72 @@
+/* Fondo con un gradiente de colores diferentes */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.6), rgba(144, 238, 144, 0.6), rgba(173, 216, 230, 0.6), rgba(255, 160, 122, 0.6));
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    min-height: 100vh;
+    padding-bottom: 50px; /* Espacio para desplazarse */
+}
+
+/* Animación de gradiente */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Galería de recuerdos */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 300px; /* Ajusta según el tamaño deseado */
+    height: 200px; /* Ajusta según el tamaño deseado */
+    object-fit: cover; /* Mantiene la proporción sin distorsionar */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Videos */
+.gallery video {
+    width: 300px; /* Ajusta según el tamaño deseado */
+    height: 200px; /* Ajusta según el tamaño deseado */
+    object-fit: cover; /* Mantiene la proporción sin distorsionar */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.gallery video:hover {
+    transform: scale(1.1);
+}
+
+header {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+}
